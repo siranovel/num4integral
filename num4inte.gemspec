@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'num4inte'
-  s.version     = '0.0.1'
-  s.date        = '2023-04-25'
+  s.version     = '0.1.1'
+  s.date        = '2023-04-27'
   s.summary     = "num for integral"
   s.description = "numerical solution for integral"
   s.authors     = ["siranovel"]
