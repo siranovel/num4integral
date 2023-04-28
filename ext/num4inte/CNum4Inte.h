@@ -5,13 +5,24 @@
 /* 構造体宣言                         */
 /**************************************/
 typedef struct _CNum4Inte CNum4Inte;
+typedef struct _CReimann  CReimann;
+typedef struct _CNewton   CNewton;
 typedef double (*Func)(double x);
 
+struct _CReimann
+{
+    double (*FP_leftReimannSumMethod)(double a, double b, double h, Func func);
+    double (*FP_rigtReimannSumMethod)(double a, double b, double h, Func func);
+};
+struct _CNewton
+{
+    double (*FP_trapezioidalRule)(double a, double b, double h, Func func);
+    double (*FP_simpsonRule)(double a, double b, double h, Func func);
+};
 struct _CNum4Inte
 {
-    double (*FP_leftReimannSumMetod)(double a, double b, double h, Func func);
-    double (*FP_rigtReimannSumMetod)(double a, double b, double h, Func func);
-    double (*FP_newtonMethod)(double a, double b, double h, Func func);
+    CReimann reimann;
+    CNewton  newton;
 };
 /**************************************/
 /* define宣言                         */
@@ -19,7 +30,8 @@ struct _CNum4Inte
 /**************************************/
 /* プロトタイプ宣言                   */
 /**************************************/
-double CNum4Inte_leftReimannSumMetod(double a, double b, double h, Func func);
-double CNum4Inte_rigtReimannSumMetod(double a, double b, double h, Func func);
-double CNum4Inte_newtonMethod(double a, double b, double h, Func func);
+double CNum4Inte_reimann_leftReimannSumMethod(double a, double b, double h, Func func);
+double CNum4Inte_reimann_rigtReimannSumMethod(double a, double b, double h, Func func);
+double CNum4Inte_rewton_trapezioidalRule(double a, double b, double h, Func func);
+double CNum4Inte_rewton_simpsonRule(double a, double b, double h, Func func);
 #endif

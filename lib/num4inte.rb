@@ -17,39 +17,51 @@ module Num4InteLib
 
     #
     # 左リーマン和法
-    # @overload leftReimannSumMetod(a, b, h, func)
-    #   y = leftReimannSumMetod(a, b, h, func)
+    # @overload leftReimannSumMethod(a, b, h, func)
+    #   y = leftReimannSumMethod(a, b, h, func)
     #   @param [double] a aの値
     #   @param [double] b bの値
     #   @param [double] h  刻み幅
     #   @param [callback] func xiに対する傾きを計算する関数
     #   @return [double] [a,b]の間の積分値
     #
-    attach_function :leftReimannSumMetod,
-        :CNum4Inte_leftReimannSumMetod, [:double, :double, :double, :f], :double
+    attach_function :leftReimannSumMethod,
+        :CNum4Inte_reimann_leftReimannSumMethod, [:double, :double, :double, :f], :double
     #
     # 右リーマン和法
-    # @overload rigtReimannSumMetod(a, b, h, func)
-    #   y = rigtReimannSumMetod(a, b, h, func)
+    # @overload rigtReimannSumMethod(a, b, h, func)
+    #   y = rigtReimannSumMethod(a, b, h, func)
     #   @param [double] a aの値
     #   @param [double] b bの値
     #   @param [double] h  刻み幅
     #   @param [callback] func xiに対する傾きを計算する関数
     #   @return [double] [a,b]の間の積分値
     #
-    attach_function :rigtReimannSumMetod,
-        :CNum4Inte_rigtReimannSumMetod, [:double, :double, :double, :f], :double
+    attach_function :rigtReimannSumMethod,
+        :CNum4Inte_reimann_rigtReimannSumMethod, [:double, :double, :double, :f], :double
     #
-    # ニュートン・シンプソン法
-    # @overload newtonMethod(a, b, h, func)
-    #   y = newtonMethod(a, b, h, func)
+    # ニュートン・コーツ法(1次:台形公式)
+    # @overload trapezioidalRule(a, b, h, func)
+    #   y = trapezioidalRule(a, b, h, func)
     #   @param [double] a aの値
     #   @param [double] b bの値
     #   @param [double] h  刻み幅
     #   @param [callback] func xiに対する傾きを計算する関数
     #   @return [double] [a,b]の間の積分値
     #
-    attach_function :newtonMethod,
-        :CNum4Inte_newtonMethod, [:double, :double, :double, :f], :double
+    attach_function :trapezioidalRule,
+        :CNum4Inte_rewton_trapezioidalRule, [:double, :double, :double, :f], :double
+    #
+    # ニュートン・コーツ法(2次:シンプソンの公式)
+    # @overload simpsonRule(a, b, h, func)
+    #   y = simpsonRule(a, b, h, func)
+    #   @param [double] a aの値
+    #   @param [double] b bの値
+    #   @param [double] h  刻み幅
+    #   @param [callback] func xiに対する傾きを計算する関数
+    #   @return [double] [a,b]の間の積分値
+    #
+    attach_function :simpsonRule,
+        :CNum4Inte_rewton_simpsonRule, [:double, :double, :double, :f], :double
 end
 
