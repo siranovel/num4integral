@@ -63,5 +63,17 @@ module Num4InteLib
     #
     attach_function :simpsonRule,
         :CNum4Inte_rewton_simpsonRule, [:double, :double, :double, :f], :double
+    #
+    # ガウス求積法
+    # @overload gaussLegendreRule(n, a, b, h, func)
+    #   y = gaussLegendreRule(n, a, b, h, func)
+    #   @param [int]    n 分割数
+    #   @param [double] a aの値
+    #   @param [double] b bの値
+    #   @param [double] h  刻み幅
+    #   @param [callback] func xiに対する傾きを計算する関数
+    #   @return [double] [a,b]の間の積分値
+    attach_function :gaussLegendreRule,
+        :CNum4Inte_gauss_gaussLegendreRule, [:int, :double, :double, :double, :f], :double
 end
 

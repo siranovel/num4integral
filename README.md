@@ -1,9 +1,10 @@
-num4integal
+num4integral
 ===========
 数値計算による積分を解くFFI
 
 ## decscription ##
 
+詳細は、https://siranovel.github.io/mydocs/num4integral
 
 ## Demo ##
 
