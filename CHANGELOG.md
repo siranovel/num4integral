@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [0.1.2] - 2023-05-24
+
+### Added
+- add function of gaussLegendreRule.
+
 ## [0.1.1] - 2023-04-27
 
 ### Added

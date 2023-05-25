@@ -4,6 +4,7 @@ num4integal
 
 ## decscription ##
 
+詳細は、https://siranovel.github.io/mydocs/num4integal  
 
 ## Demo ##
 

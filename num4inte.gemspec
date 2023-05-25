@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'num4inte'
-  s.version     = '0.1.1'
-  s.date        = '2023-04-27'
+  s.version     = '0.1.2'
+  s.date        = '2023-05-24'
   s.summary     = "num for integral"
   s.description = "numerical solution for integral"
   s.authors     = ["siranovel"]
@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
       'changelog_uri'     => s.homepage + '/blob/main/CHANGELOG.md',
       'documentation_uri' => "https://rubydoc.info/gems/#{s.name}/#{s.version}",
       'homepage_uri'      => s.homepage,
+      'wiki_uri'          => 'https://github.com/siranovel/mydocs/tree/main/num4integral',
   }
   s.license     = "MIT"
   s.files       = ["LICENSE", "Gemfile", "CHANGELOG.md"]
