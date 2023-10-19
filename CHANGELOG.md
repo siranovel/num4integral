@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [0.1.3] - 2023-10-18
+
+### add
+- add sample of yardoc
+
 ## [0.1.2] - 2023-05-24
 
 ### Added
