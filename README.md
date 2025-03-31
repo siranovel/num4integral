@@ -1,10 +1,10 @@
-num4integral
+num4integal
 ===========
 数値計算による積分を解くFFI
 
 ## decscription ##
 
-詳細は、https://siranovel.github.io/mydocs/num4integral
+詳細は、https://siranovel.github.io/mydocs/num4integal  
 
 ## Demo ##
 
@@ -14,6 +14,8 @@ num4integral
 ruby FFI-compilerライブラリ
 
 ## Usage ##
+
+sample/spec内の各ファイル参照
 
 ## install ##
 
